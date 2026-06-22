@@ -1,0 +1,17 @@
+{
+  "loki_push_url": "http://127.0.0.1:3100/loki/api/v1/push",
+  "state_path": "/var/lib/tiny-loki-forwarder/state.json",
+  "interval_seconds": 5,
+  "batch_size": 100,
+  "start_at_end": true,
+  "sources": [
+    {
+      "labels": {
+        "host": "example-host",
+        "service": "example-service",
+        "source_type": "service_log"
+      },
+      "include": ["/var/log/example-service/*.log"]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+[Unit]
+Description=tiny-loki-forwarder
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/tiny-loki-forwarder /etc/tiny-loki-forwarder/config.json
+Restart=always
+RestartSec=5
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

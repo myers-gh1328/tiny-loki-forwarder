@@ -62,6 +62,13 @@ The process runs continuously until stopped.
 
 An example unit is included in `examples/tiny-loki-forwarder.service`.
 
+## Dependency Updates
+
+Dependency updates are managed by Dependabot through `.github/dependabot.yml`.
+Dependabot opens weekly grouped PRs for Python packaging and GitHub Actions
+updates. These PRs are never auto-merged; review and run the normal
+verification path before merge.
+
 ## License
 
 MIT
